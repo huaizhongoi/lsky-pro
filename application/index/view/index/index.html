@@ -13,8 +13,8 @@
     {if (bool) $config.allowed_tourist_upload or $user}
     <div class="upload-container">
       <div class="title">
-        <h1>Image Upload</h1>
-        <p>最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MB的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。</p>
+        <!--h1>Image Upload</h1-->
+	<p style="padding-bottom: 6px; color: #000; ">最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MiB 的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。<b>仅供上传用于 LibreOJ 比赛/题目/讨论的图片，其他图片可能会被删除。</b></p>
       </div>
       <form action="" method="post" enctype="multipart/form-data">
         <input id="image" style="display: none;" type="file" multiple name="image" accept="image/*">
@@ -36,7 +36,8 @@
     </div>
     {else /}
     <div class="not-logged-in jumbotron">
-      <h2>请登录后体验</h2>
+      <h2>请登录后使用</h2>
+      <p style="margin-top: -10px; margin-bottom: 30px; font-size: 1em; ">（账户与 LibreOJ 主站不同步）</p>
       <a href="{:url('auth/login')}" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-cyan mdui-text-color-white">登录</a>
       <a href="{:url('auth/register')}" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-green mdui-text-color-white">注册</a>
     </div>
