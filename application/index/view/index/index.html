@@ -14,7 +14,7 @@
     <div class="upload-container">
       <div class="title">
         <!--h1>Image Upload</h1-->
-	<p style="padding-bottom: 6px; color: #000; ">最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MiB 的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。<b>仅供上传用于 LibreOJ 比赛/题目/讨论的图片，其他图片可能会被删除。</b></p>
+	<p style="padding-bottom: 6px; color: #000; ">最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MiB 的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。<b>仅供上传用于 HZOJ 比赛/题目/讨论的图片，其他图片可能会被删除。</b></p>
       </div>
       <form action="" method="post" enctype="multipart/form-data">
         <input id="image" style="display: none;" type="file" multiple name="image" accept="image/*">

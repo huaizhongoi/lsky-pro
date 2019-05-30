@@ -23,7 +23,7 @@ class Images extends Model
             'key' => $data['strategy'],
             'name' => $data['strategy'] . '_cdn_domain',
         ])->value('value');
-        $domain = $cdnDoamin ? $cdnDoamin : request()->domain();
+        $domain = ($cdnDoamin ? $cdnDoamin : request()->domain()) . "/image-upload";
         return make_url($domain, $data['pathname']);
     }
 
