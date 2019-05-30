@@ -131,7 +131,7 @@ function make_token()
 function make_url($domain, $pathname = null)
 {
     $domain = rtrim($domain, '/');
-    if (false === strpos($domain, 'https://') && false === strpos($domain, 'http://')) {
+    if (false === strpos($domain, 'https://') && false === strpos($domain, 'http://') && strpos($domain, '/image-upload') != 0) {
         $domain = 'http://' . $domain;
     }
     return str_replace('\\', '/', $domain . ($pathname ? '/' . $pathname : null));
