@@ -12,6 +12,7 @@
 // [ 应用入口文件 ]
 namespace think;
 
+define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 foreach ($_SERVER as &$value) {
     $prefix = "/image-upload";
     $prefixLength = strlen($prefix);
