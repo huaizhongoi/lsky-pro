@@ -26,11 +26,9 @@
     <span mdui-drawer="{target: '#menu'}" class="mdui-btn mdui-btn-icon open-menu"><i class="mdui-icon material-icons">&#xe5d2;</i></span>
     <a href="{:url('/')}" class="mdui-typo-headline">{$config.site_name}</a>
     <div class="mdui-toolbar-spacer"></div>
+    <!-- Back -->
+    <span id="back" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe923;</i></span>
     {if $user}
-      <!-- Update -->
-      {if $user.is_admin}
-      <span id="update" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe923;</i></span>
-      {/if}
     <!-- User -->
     <a href="javascript:void(0)" mdui-menu="{target: '#user'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe853;</i></a>
     <ul class="mdui-menu" id="user">
@@ -171,8 +169,8 @@
       }
     });
 
-    $('#update').click(function () {
-      app.update(thatVer, true);
+    $('#back').click(function () {
+      window.location.href="/";
     });
   });
 </script>
