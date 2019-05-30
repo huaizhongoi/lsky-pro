@@ -37,5 +37,8 @@ else if (get_class($result) === 'think\Response' && $result->contentType === 'te
 
     $result->data = str_replace("'/image-upload/", "'/", $result->data);
     $result->data = str_replace("'/", "'/image-upload/", $result->data);
+
+    $result->data = str_replace("\"" . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/image-upload', "\"" . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/', $result->data);
+    $result->data = str_replace("\"" . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'], "\"" . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/image-upload', $result->data);
 }
 $result->send();
