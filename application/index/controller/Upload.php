@@ -90,7 +90,8 @@ class Upload extends Base
         }
 
         $cdnDomain = $currentStrategy . '_cdn_domain';
-        $domain = $this->request->domain();
+        // $domain = $this->request->domain();
+        $domain = "/image-upload";
         if (array_key_exists($cdnDomain, $strategyConfig)) {
             if ($strategyConfig[$cdnDomain]) {
                 $domain = $strategyConfig[$cdnDomain];
