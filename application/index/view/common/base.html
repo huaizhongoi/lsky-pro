@@ -170,7 +170,8 @@
     });
 
     $('#back').click(function () {
-      var path_to = window.location.protocol.concat("//".concat(window.location.host));
+      //var path_to = window.location.protocol.concat("//".concat(window.location.host));
+      var path_to = "http://".concat(window.location.host);
       window.location=path_to
     });
   });
