@@ -13,8 +13,8 @@
   <main>
     <div class="upload-container">
       <div class="title">
-        <h1>Image Upload</h1>
-        <p>最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MB的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。</p>
+        <!--h1>Image Upload</h1-->
+	<p style="padding-bottom: 6px; color: #000; ">最大可上传 {:round($config.upload_max_size / 1024 / 1024)} MiB 的图片，单次同时可选择 {$config.upload_single_num} 张。本站已托管 {$images_count} 张图片。<b>仅供上传用于 LibreOJ 比赛/题目/讨论的图片，其他图片可能会被删除。</b></p>
       </div>
       <form action="" method="post" enctype="multipart/form-data">
         <input id="image" style="display: none;" type="file" multiple name="image" accept="image/*">
@@ -39,6 +39,7 @@
       <div class="content">
         <div class="panel-box mdui-color-white mdui-text-center">
           <h6 class="mdui-m-b-2">请登录后体验</h6>
+          <p style="margin-top: -10px; margin-bottom: 30px; font-size: 1em; ">（账户与 HZOJ 主站不同步）</p>
           <div class="mdui-btn-group">
             <a href="{:url('auth/login')}" class="mdui-btn mdui-ripple mdui-color-cyan mdui-text-color-white mdui-btn-dense">登录</a>
             <a href="{:url('auth/register')}" class="mdui-btn mdui-ripple mdui-color-green mdui-text-color-white mdui-btn-dense">注册</a>

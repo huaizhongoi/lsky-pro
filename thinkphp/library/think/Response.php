@@ -19,7 +19,7 @@ class Response
      * 原始数据
      * @var mixed
      */
-    protected $data;
+    public $data;
 
     /**
      * 应用对象实例
@@ -31,7 +31,7 @@ class Response
      * 当前contentType
      * @var string
      */
-    protected $contentType = 'text/html';
+    public $contentType = 'text/html';
 
     /**
      * 字符集

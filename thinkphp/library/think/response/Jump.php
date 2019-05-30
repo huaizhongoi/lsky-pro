@@ -15,7 +15,7 @@ use think\Response;
 
 class Jump extends Response
 {
-    protected $contentType = 'text/html';
+    public $contentType = 'text/html';
 
     /**
      * 处理数据
