@@ -53,11 +53,12 @@ class Users extends Model
 
     public static function login($account, $password)
     {
-        $field = 'email';
-
         if (!$account) {
             throw new Exception('请输入账号');
         }
+
+        if (strpos($account, '@')) $field = 'email';
+        else $field = 'username';
 
         if (!$password) {
             throw new Exception('请输入密码');
