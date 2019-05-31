@@ -27,7 +27,7 @@
     <a href="{:url('/')}" class="mdui-typo-headline">{$config.site_name}</a>
     <div class="mdui-toolbar-spacer"></div>
     <!-- Back -->
-    <span id="back" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe923;</i></span>
+    <span id="back" class="mdui-btn mdui-btn-icon" title="返回主站"><i class="mdui-icon material-icons">&#xe923;</i></span>
     {if $user}
     <!-- User -->
     <a href="javascript:void(0)" mdui-menu="{target: '#user'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe853;</i></a>
@@ -170,9 +170,8 @@
     });
 
     $('#back').click(function () {
-      //var path_to = window.location.protocol.concat("//".concat(window.location.host));
-      var path_to = "http://".concat(window.location.host);
-      window.location=path_to
+      console.log(window.location.protocol.concat("//"))
+      window.location = "http://".concat(window.location.host);
     });
   });
 </script>
