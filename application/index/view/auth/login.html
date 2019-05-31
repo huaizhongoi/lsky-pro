@@ -17,8 +17,8 @@
             <form action="{:url('auth/login')}" method="post">
               {include file="common:alert"}
               <div class="mdui-textfield mdui-textfield-floating-label">
-                <label class="mdui-textfield-label">邮箱</label>
-                <input class="mdui-textfield-input" type="email" name="account" value="{:input('post.account')}"/>
+                <label class="mdui-textfield-label">用户名 / 邮箱</label>
+                <input class="mdui-textfield-input" type="text" name="account" value="{:input('post.account')}"/>
               </div>
               <div class="mdui-textfield mdui-textfield-floating-label">
                 <label class="mdui-textfield-label">密码</label>
