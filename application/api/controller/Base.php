@@ -35,7 +35,7 @@ class Base extends Controller
             $this->response('API is not open yet.', [], 500);
         }
 
-        $this->token = $this->request->header('token');
+        $this->token = $this->request->header('token', $this->param('token'));
         $this->auth($this->token);
 
         $format = $this->param('format');
@@ -76,7 +76,7 @@ class Base extends Controller
         $response = Response::create([
             'code' => $code,
             'msg' => $msg,
-            'data' => $data,
+            'data' => $data ?: new \stdClass(),
             'time' => time()
         ], $this->format, 200);
 
