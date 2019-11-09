@@ -20,7 +20,7 @@ class View extends Response
     protected $vars    = [];
     protected $config  = [];
     protected $filter;
-    protected $contentType = 'text/html';
+    public $contentType = 'text/html';
 
     /**
      * 是否内容渲染
